@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Triangulo", "Triangulo", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangulo", "Triangulo\Triangulo.csproj", "{122123D4-5EC9-416D-92F0-6DCEA1B9D676}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Produto", "Produto", "{ECC0F5C5-F988-4520-8AC8-70BCCF542C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Produto", "Produto\Produto.csproj", "{4879400B-7EFC-4FA6-891C-6FF32F9BE2BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{122123D4-5EC9-416D-92F0-6DCEA1B9D676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{122123D4-5EC9-416D-92F0-6DCEA1B9D676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{122123D4-5EC9-416D-92F0-6DCEA1B9D676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4879400B-7EFC-4FA6-891C-6FF32F9BE2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4879400B-7EFC-4FA6-891C-6FF32F9BE2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4879400B-7EFC-4FA6-891C-6FF32F9BE2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4879400B-7EFC-4FA6-891C-6FF32F9BE2BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{0BF2D163-B91E-4EDD-8865-43F97F3186F3} = {044988BA-CE54-43F5-988B-29D626C528FE}
 		{14C17355-E254-4AA3-9563-B32524D22548} = {DB3693F8-ED59-4A45-9E7D-6451FD9E413A}
 		{122123D4-5EC9-416D-92F0-6DCEA1B9D676} = {B0531DA1-CE87-4D3D-89F2-D89D7148247B}
+		{4879400B-7EFC-4FA6-891C-6FF32F9BE2BC} = {ECC0F5C5-F988-4520-8AC8-70BCCF542C8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EEC67FFD-FD5F-4E63-A110-60B8271670EB}
