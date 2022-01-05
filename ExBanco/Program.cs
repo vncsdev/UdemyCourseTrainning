@@ -6,41 +6,43 @@ namespace ExBanco
     {
         static void Main(string[] args)
         {
+            Banco b;
+
             Console.Write("Entre o número da conta: ");
             int conta = int.Parse(Console.ReadLine());
             Console.Write("Entre o titular da conta: ");
             string titular = Console.ReadLine();
             Console.Write("Haverá depósito inicial? (s/n): ");
-            char depInicial = char.Parse(Console.ReadLine().ToLower());
+            char resp = char.Parse(Console.ReadLine().ToLower());
 
-            if (depInicial == 's')
+            if (resp == 's')
             {
                 Console.Write("Entre o valor do depósito inicial: ");
-                double valDepInicial = double.Parse(Console.ReadLine());
+                double DepInicial = double.Parse(Console.ReadLine());
 
-                Banco b = new Banco(titular, conta, valDepInicial);
-
-                Console.WriteLine();
-                Console.WriteLine("Dados da conta: \n" +
-                                  $"Conta: {b.Conta}\n" +
-                                  $"Titular: {b.Nome}\n" +
-                                  $"Saldo: {b.Saldo}");
-            }
-            else if (depInicial == 'n')
-            {
-                Banco b1 = new Banco(titular, conta);
-
-                Console.WriteLine();
-                Console.WriteLine("Dados da conta: \n" + b1);
+                b = new Banco(conta, titular, DepInicial);
             }
             else
             {
-                Console.WriteLine("Comando inválido, tente novamente");
+                b = new Banco(conta, titular);
             }
 
             Console.WriteLine();
+            Console.WriteLine($"DADOS DA CONTA: \n{b}");
+
+            Console.WriteLine();
             Console.Write("Entre um valor para depósito: ");
-            double dep = double.Parse(Console.ReadLine());
+            b.Deposito(double.Parse(Console.ReadLine()));
+            
+            Console.WriteLine();
+            Console.WriteLine($"VALORES ATUALIZADOS: \n{b}");
+
+            Console.WriteLine();
+            Console.Write("Entre um valor para saque: ");
+            b.Saque(double.Parse(Console.ReadLine()));           
+
+            Console.WriteLine();
+            Console.WriteLine($"VALORES ATUALIZADOS: \n{b}");
         }
     }
 }

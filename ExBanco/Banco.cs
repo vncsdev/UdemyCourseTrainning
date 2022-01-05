@@ -12,15 +12,15 @@ namespace ExBanco
         public int Conta { get; private set; }
         public double Saldo { get; private set; }
 
-        public Banco(string nome, int conta)
+        public Banco(int conta, string nome)
         {
-            _nome = nome;
             Conta = conta;
+            Nome = nome;
         }
 
-        public Banco(string nome, int conta, double depInicial) : this(nome, conta)
+        public Banco(int conta, string nome, double depInicial) : this(conta, nome)
         {
-            Saldo = depInicial;
+            Deposito(depInicial);
         }
 
         public string Nome
@@ -35,8 +35,6 @@ namespace ExBanco
             }
         }
 
-        public static double TaxaSaque = 5.00;
-
         public void Deposito(double dep)
         {
             Saldo += dep;
@@ -44,7 +42,7 @@ namespace ExBanco
 
         public void Saque(double saque)
         {
-            Saldo -= saque + TaxaSaque;
+            Saldo -= saque + 5.00;
         }
 
         public override string ToString()
