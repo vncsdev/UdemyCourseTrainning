@@ -29,7 +29,7 @@ namespace ExVetor
 
             Console.WriteLine("QUARTOS OCUPADOS:");
             Console.WriteLine();
-            for (int i = 0; i < x; i++)
+            for (int i = 0; i < n; i++)
             {
                 if (rooms[i] != null)
                 {
