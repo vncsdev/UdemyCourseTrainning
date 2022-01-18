@@ -26,7 +26,7 @@ namespace ExComposicao.Entities
             Contracts.Add(contract);
         }
 
-        public void RemoveContract (HourContract contract)
+        public void RemoveContract(HourContract contract)
         {
             Contracts.Remove(contract);
         }

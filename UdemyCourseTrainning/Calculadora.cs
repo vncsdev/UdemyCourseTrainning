@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UdemyCourseTrainning
 {
-    internal class Calculadora
+    class Calculadora
     {
         static public double pi = 3.14;
 
