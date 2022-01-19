@@ -24,7 +24,7 @@ namespace OrderSystem
             OrderStatus status = Enum.Parse<OrderStatus>(Console.ReadLine());
             Console.WriteLine();
 
-            Order order = new Order(DateTime.Now, status);
+            Order order = new Order(DateTime.Now, status, client);
 
             Console.Write("How many items to this order? ");
             int n = int.Parse(Console.ReadLine());
@@ -41,18 +41,14 @@ namespace OrderSystem
                 int prodQuantity = int.Parse(Console.ReadLine());
 
                 Product product = new Product(prodName, prodPrice);
-                OrderItem orderItem = new OrderItem(prodQuantity, prodPrice);
+                OrderItem orderItem = new OrderItem(prodQuantity, prodPrice, product);
+                order.AddItem(orderItem);
             }
 
             Console.WriteLine();
             Console.WriteLine("ORDER SUMMARY:");
-            Console.WriteLine($"Order moment: {order.Moment}");
-            Console.WriteLine($"Order status: {order.Status}");
-            Console.WriteLine($"Client: {client.Name} ({client.BirthDate.ToString("dd/MM/yyyy")}) - {client.Email}");
-            Console.WriteLine();
-            Console.WriteLine("ORDER ITEMS:");
             Console.WriteLine(order);
-            Console.WriteLine($"Total Price: {order.Total().ToString("C")}");
+
         }
     }
 }

@@ -14,10 +14,11 @@ namespace OrderSystem.Entities
 
         public Order() { }
 
-        public Order(DateTime moment, OrderStatus status)
+        public Order(DateTime moment, OrderStatus status, Client client)
         {
             Moment = moment;
             Status = status;
+            Client = client;
         }
 
         public void AddItem(OrderItem item)
@@ -44,16 +45,16 @@ namespace OrderSystem.Entities
         {
             StringBuilder sb = new StringBuilder();
 
+            sb.AppendLine($"Order moment: {Moment}");
+            sb.AppendLine($"Order status: {Status}");
+            sb.AppendLine($"Client: {Client}");
+            sb.AppendLine("Order items:");
             foreach (OrderItem item in Items)
             {
-                sb.Append(item.Product.Name);
-                sb.Append(", ");
-                sb.Append(item.Product.Price.ToString("C"));
-                sb.Append(", Quantity: ");
-                sb.Append(item.Quantity);
-                sb.Append(", Subtotal: ");
-                sb.Append(item.SubTotal());
+                sb.AppendLine(item.ToString());
             }
+
+            sb.AppendLine($"Total price: {Total().ToString("C")}");
 
             return sb.ToString();
         }

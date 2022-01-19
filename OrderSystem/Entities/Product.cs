@@ -1,4 +1,5 @@
-﻿namespace OrderSystem.Entities
+﻿
+namespace OrderSystem.Entities
 {
     internal class Product
     {
