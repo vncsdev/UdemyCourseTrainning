@@ -43,6 +43,7 @@ namespace OrderSystem
                 Product product = new Product(prodName, prodPrice);
                 OrderItem orderItem = new OrderItem(prodQuantity, prodPrice, product);
                 order.AddItem(orderItem);
+                Console.WriteLine();
             }
 
             Console.WriteLine();
